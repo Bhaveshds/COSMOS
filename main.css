@@ -14,7 +14,7 @@ from{
 	opacity: 0;
 }
 to{
-	opacity: 1;
+	opacity: 0.7;
 }
 
 }
@@ -28,7 +28,8 @@ h1 {
 	word-spacing: -0.5em;
     text-align: center;
 	margin-bottom: 10vh;
-	animation: textanim 10s 1;
+	opacity: 0.7;
+	animation: textanim 8s 1;
 	
 }
 
@@ -51,6 +52,8 @@ h1 {
 
 .video-container {
 	position: absolute;
+	perspective: 1px;
+    transform-style: preserve-3d;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -62,15 +65,24 @@ h1 {
 	
 }
 
-.image-bg1{
-	height: 100vh;
+.second-section{
+	background-image: url(images/banner1.png);
+	background-size: cover;
+	background-attachment: fixed;
+	height: 110vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding-bottom: 100px;
-	position: fixed;
+	padding-bottom: 500px;
+	position: relative;
+	z-index: 2;
+}
 
+
+.content{
+	opacity: 1;
+	color: #fff;
 }
 
 
@@ -89,10 +101,40 @@ h1 {
 	text-align: center;
 }
 
-/*.box {
-    border-radius: 15px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-bottom: 2em;
-    overflow: hidden;
-    padding: 4em;
-}*/
+.box {
+	position: relative;
+	width: 50vw;
+	height: 45vh;
+	margin: 200px auto;
+	box-sizing: border-box;
+	
+	overflow: hidden;
+	background: rgb(73, 73, 69);
+	border-radius: 12px;
+	
+	
+}
+
+
+
+.box .icon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #CFCFEA;
+	transition: 0.3s;
+	font-size: 40px;
+	
+}
+
+
+.box:hover .icon{
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
