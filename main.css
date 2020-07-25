@@ -1,4 +1,7 @@
-
+*{
+	margin: 0;
+	padding: 0;
+}
 @font-face{
 	font-family: 'OuterspaceMilitia';
 	src: url(fonts/OuterspaceMilitia.ttf);
@@ -19,12 +22,12 @@ to{
 h1 {
 	font-family: OuterspaceMilitia;
 	font-weight: 600;
-	font-size: 70px;
+	font-size: 10vh;
 	color: cornsilk;
 	line-height: 1.5;
 	word-spacing: -0.5em;
     text-align: center;
-	margin-bottom: -200px;
+	margin-bottom: 10vh;
 	animation: textanim 10s 1;
 	
 }
@@ -35,13 +38,12 @@ h1 {
 }
 
 .vid-bg {
-    height: 50vh;
+    height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	color: #fff;
-	padding: 0 20px;
+	padding-bottom: 100px;
 
 }
 
@@ -57,12 +59,40 @@ h1 {
 	position: fixed;
 	background: #000;
 	
+	
 }
 
-.box {
+.image-bg1{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-bottom: 100px;
+	position: fixed;
+
+}
+
+
+#footer{
+	background-color: #3D3B3B;
+	position: relative;
+	height: 30vh;
+	width: 98.75vw;
+	margin-top: -100px;
+	clear: both;
+	z-index: 2;
+}
+
+#footertext{
+	color: #fff;
+	text-align: center;
+}
+
+/*.box {
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.5);
     margin-bottom: 2em;
     overflow: hidden;
     padding: 4em;
-}
+}*/
