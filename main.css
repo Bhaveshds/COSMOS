@@ -1,8 +1,19 @@
+
 @font-face{
 	font-family: 'OuterspaceMilitia';
 	src: url(fonts/OuterspaceMilitia.ttf);
 	font-style: normal;
 	font-weight: 100;
+}
+
+@keyframes textanim{
+from{
+	opacity: 0;
+}
+to{
+	opacity: 1;
+}
+
 }
 
 h1 {
@@ -13,16 +24,18 @@ h1 {
 	line-height: 1.5;
 	word-spacing: -0.5em;
     text-align: center;
-	margin-bottom: 180px;
-	opacity: 0.9;
+	margin-bottom: -200px;
+	animation: textanim 10s 1;
+	
 }
 
 .content-1 {
+	
 		z-index: 2;
 }
 
 .vid-bg {
-    height: 100vh;
+    height: 50vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -42,8 +55,8 @@ h1 {
 	height: 100%;
 	overflow: hidden;
 	position: fixed;
-	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
-		center/cover;
+	background: #000;
+	
 }
 
 .box {
