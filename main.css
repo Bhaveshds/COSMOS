@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	
 }
 @font-face{
 	font-family: 'OuterspaceMilitia';
@@ -33,14 +34,12 @@ h1 {
 	
 }
 
-.content-1 {
-	
-		z-index: 2;
-}
 
-.vid-bg {
+.first-section {
+	position: relative;
     height: 100vh;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
@@ -52,7 +51,6 @@ h1 {
 
 .video-container {
 	position: absolute;
-	perspective: 1px;
     transform-style: preserve-3d;
 	top: 0;
 	left: 0;
@@ -65,11 +63,18 @@ h1 {
 	
 }
 
+.content-1 {
+	
+	z-index: 2;
+}
+
+
 .second-section{
 	background-image: url(images/banner1.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-	height: 110vh;
+	height: 90vh;
+	max-width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -89,18 +94,19 @@ h1 {
 
 .box {
 	position: relative;
+	cursor: pointer;
+	top: 90px;
 	width: 55vw;
 	height: 50vh;
-	margin: 200px auto;
+	
 	box-sizing: border-box;
 	
 	overflow: hidden;
-	background: rgba(28, 39, 38, 0.644);
+	background: rgba(28, 39, 38, 0.829);
 	border-radius: 12px;
 	
 	
 }
-
 
 
 .box .icon{
@@ -110,37 +116,39 @@ h1 {
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	background: rgb(73, 73, 69);
-	transition: 0.2s;
+	
+	background: linear-gradient(90deg, rgb(146, 179, 218),rgb(73, 226, 247),rgb(0, 225, 255));
+	transition: 0.1s;
 	font-size: 40px;
 	
 }
 
 
 .box:hover .icon{
-	top: 20px;
+	top: 0.2em;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 80px;
-	height: 80px;
-	border-radius: 500%;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
 
 }
 
-.box .icon .fa{
+
+
+.box .icon .info{
+	color: chartreuse;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	font-size: 80px;
-	transition: 0.2s;
-	border-radius: 500%;
-	color: #fff;
+	width: 80px;
+	transition: 0.1s;
+	border-radius: 50%;
 }
 
-.box:hover .icon .fa{
-	font-size: 40px;
-
+.box:hover .icon .info{
+	width: 40px;
 }
 
 .box .content{
@@ -151,26 +159,115 @@ h1 {
 	text-align: center;
 	padding: 10px;
 	box-sizing: border-box;
-	transition: 0.2s;
+	transition: 0.1s;
 }
 
 .box:hover .content{
-	top: 100px;
+	top: 4em;
 }
 
+.button-wrapper{
+position: absolute;
+right: 1em;
+bottom: 25em;
+}
 
-#footer{
+.button1{
+	position: relative;
+	display: flex;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 24px;
+	color: #26db2f;
+}
+
+ .button1:hover{
+	color: #255784;
+	background: #26db2f;
+	box-shadow: 0 0 10px #26db2f, 0 0 40px #26db2f, 0 0 80px #26db2f;
+	transition: 0.1s;
+	border-radius: 10px;
+} 
+
+/* .button1  span{
+	position: absolute;
+	display: block;
+
+}
+
+.button1 span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px ;
+	background: linear-gradient(90deg,transparent,#2196f3);
+}
+
+.button1:hover  span:nth-child(1){
+	left: 100%;
+	transition: 1s;
+}
+
+.button1 span:nth-child(3){
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px ;
+	background: linear-gradient(270deg,transparent,#2196f3);
+}
+
+.button1:hover  span:nth-child(3){
+	right: 100%;
+	transition: 1s;
+	transition-delay: 0.5s;
+}
+
+.button1 span:nth-child(2){
+	right: 0;
+	top: -100%;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#2196f3);
+}
+
+.button1:hover  span:nth-child(2){
+	top: 100%;
+	transition: 1s;
+	transition-delay: 0.25s;
+}
+
+.button1 span:nth-child(4){
+	left: 0;
+	bottom: -100%;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#2196f3);
+}
+
+.button1:hover  span:nth-child(4){
+	bottom: 100%;
+	transition: 1s;
+	transition-delay: 0.75s;
+} */
+
+
+.footer{
 	background-color: #3D3B3B;
 	position: relative;
-	height: 30vh;
-	width: 98.75vw;
-	margin-top: -100px;
-	clear: both;
-	z-index: 2;
+	height: 50vh;
+	padding-right: 100px;
 }
 
-#footertext{
+.footer  .footer-bottom{
+	position: absolute;
+	padding: 10px;
+	bottom: 0px;
+	left: 0px;
+	width: 97.3vw;
 	color: #fff;
+	background: rgb(32, 30, 30);
 	text-align: center;
 }
 
