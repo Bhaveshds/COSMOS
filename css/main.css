@@ -266,6 +266,7 @@ bottom: 25em;
 	background-color: #3D3B3B;
 	position: relative;
 	height: 50vh;
+	width: 100%;
 	
 }
 
@@ -285,12 +286,11 @@ bottom: 25em;
 	text-align: center;
 }
 
-.footer  .footer-bottom{
-	position: absolute;
-	padding: 10px;
+.footer-bottom{
+	position: relative;
+	padding: 10px 0px 10px 0px;
+	width: 100%;
 	bottom: 0px;
-	left: 0px;
-	right: 0px;
 	color: #fff;
 	background: rgb(32, 30, 30);
 	text-align: center;
