@@ -4,16 +4,6 @@
 
 }
 
-html, body{
-	height: 100%;
-	width: 100%;
-	background-color: #000;
-}
-
-.page-wrapper{
-	min-height: 100%;
-}
-
 @font-face{
 	font-family: 'OuterspaceMilitia';
 	src: url(../assets/fonts/OuterspaceMilitia.ttf);
@@ -31,14 +21,12 @@ to{
 
 }
 
-
-
 /* SECTION-1 */
 
 .first-section {
 	position: relative;
 	height: 100vh;
-	min-width: 100%;
+	width: 100%;
 	display: flex;
 
 	align-items: center;
@@ -83,8 +71,11 @@ h1 {
 }
 
 .content-1 {
-	
 	z-index: 2;
+}
+
+.content-1 header h1 {
+	font-size: 5vw;
 }
 
 /* SECTION-2 */
@@ -285,6 +276,7 @@ bottom: 25em;
 	background-color: #3D3B3B;
 	position: relative;
 	height: 50vh;
+	width: 100%;
 	
 }
 
@@ -304,12 +296,11 @@ bottom: 25em;
 	text-align: center;
 }
 
-.footer  .footer-bottom{
-	position: absolute;
-	padding: 10px;
+.footer-bottom{
+	position: relative;
+	padding: 10px 0px 10px 0px;
+	width: 100%;
 	bottom: 0px;
-	left: 0px;
-	right: 0px;
 	color: #fff;
 	background: rgb(32, 30, 30);
 	text-align: center;
