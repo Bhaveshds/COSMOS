@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+
 }
 
 @font-face{
@@ -27,7 +28,7 @@ to{
 	height: 100vh;
 	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
+
 	align-items: center;
 	justify-content: center;
 	text-align: center;
@@ -35,21 +36,25 @@ to{
 
 }
 
-
+/* video{
+	max-width: 1500px;
+	max-height: 1500px;
+} */
 
 .video-container {
 	position: absolute;
-    transform-style: preserve-3d;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	background-size: cover;
+	align-content: center;
+	width: 1800px;
+	height: 800px;
 	overflow: hidden;
 	position: fixed;
-	background: #000;
+
 	
 	
 }
+
+
 
 h1 {
 	font-family: OuterspaceMilitia;
@@ -80,7 +85,7 @@ h1 {
 	background-size: cover;
 	background-attachment: fixed;
 	height: 90vh;
-	max-width: 100%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -199,7 +204,10 @@ bottom: 25em;
 
 } 
 
- /* .button1  span{
+/*BUTTON STYLING (N.I.)*/
+
+ /*
+  .button1  span{
 	position: absolute;
 	display: block;
 
@@ -258,7 +266,9 @@ bottom: 25em;
 	bottom: 100%;
 	transition: 1s;
 	transition-delay: 0.75s;
-}  */
+}  
+*/
+
 
 /* FOOTER */
 
