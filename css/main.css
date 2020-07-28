@@ -1,15 +1,6 @@
 *{
 	margin: 0;
 	padding: 0;
-	position: relative;
-}
-
-html, body{
-	height: 100%;
-}
-
-.page-wrapper{
-	min-height: 100%;
 }
 
 @font-face{
@@ -29,14 +20,12 @@ to{
 
 }
 
-
-
 /* SECTION-1 */
 
 .first-section {
 	position: relative;
 	height: 100vh;
-	min-width: 100%;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -77,8 +66,11 @@ h1 {
 }
 
 .content-1 {
-	
 	z-index: 2;
+}
+
+.content-1 header h1 {
+	font-size: 5vw;
 }
 
 /* SECTION-2 */
