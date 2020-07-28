@@ -1,11 +1,20 @@
 *{
 	margin: 0;
 	padding: 0;
-	
+	position: relative;
 }
+
+html, body{
+	height: 100%;
+}
+
+.page-wrapper{
+	min-height: 100%;
+}
+
 @font-face{
 	font-family: 'OuterspaceMilitia';
-	src: url(fonts/OuterspaceMilitia.ttf);
+	src: url(../assets/fonts/OuterspaceMilitia.ttf);
 	font-style: normal;
 	font-weight: 100;
 }
@@ -20,24 +29,14 @@ to{
 
 }
 
-h1 {
-	font-family: OuterspaceMilitia;
-	font-weight: 600;
-	font-size: 10vh;
-	color: cornsilk;
-	line-height: 1.5;
-	word-spacing: -0.5em;
-    text-align: center;
-	margin-bottom: 10vh;
-	opacity: 0.7;
-	animation: textanim 8s 1;
-	
-}
 
+
+/* SECTION-1 */
 
 .first-section {
 	position: relative;
-    height: 100vh;
+	height: 100vh;
+	min-width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -63,14 +62,29 @@ h1 {
 	
 }
 
+h1 {
+	font-family: OuterspaceMilitia;
+	font-weight: 600;
+	font-size: 10vh;
+	color: cornsilk;
+	line-height: 1.5;
+	word-spacing: -0.5em;
+    text-align: center;
+	margin-bottom: 10vh;
+	opacity: 0.7;
+	animation: textanim 8s 1;
+	
+}
+
 .content-1 {
 	
 	z-index: 2;
 }
 
+/* SECTION-2 */
 
 .second-section{
-	background-image: url(images/banner1.jpg);
+	background-image: url(../assets/images/banner1.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	height: 90vh;
@@ -181,6 +195,7 @@ bottom: 25em;
 	text-decoration: none;
 	font-size: 24px;
 	color: #26db2f;
+	/* overflow: hidden;  */
 }
 
  .button1:hover{
@@ -189,9 +204,10 @@ bottom: 25em;
 	box-shadow: 0 0 10px #26db2f, 0 0 40px #26db2f, 0 0 80px #26db2f;
 	transition: 0.1s;
 	border-radius: 10px;
+
 } 
 
-/* .button1  span{
+ /* .button1  span{
 	position: absolute;
 	display: block;
 
@@ -250,14 +266,31 @@ bottom: 25em;
 	bottom: 100%;
 	transition: 1s;
 	transition-delay: 0.75s;
-} */
+}  */
 
+/* FOOTER */
 
 .footer{
 	background-color: #3D3B3B;
 	position: relative;
 	height: 50vh;
-	padding-right: 100px;
+	
+}
+
+.footer .footer-contents{
+	border: 1px solid red;
+	height: 44vh;
+	position: relative;
+	
+
+}
+
+.footer .footer-contents .footer-about{
+	position: relative;
+	width: 50%;
+	height: 98%;
+	border: 2px solid blue;
+	text-align: center;
 }
 
 .footer  .footer-bottom{
@@ -265,7 +298,7 @@ bottom: 25em;
 	padding: 10px;
 	bottom: 0px;
 	left: 0px;
-	width: 97.3vw;
+	right: 0px;
 	color: #fff;
 	background: rgb(32, 30, 30);
 	text-align: center;
