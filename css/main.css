@@ -4,6 +4,10 @@
 
 }
 
+script{
+	z-index: 100;
+}
+
 html, body{
 	height: 100%;
 	width: 100%;
@@ -15,12 +19,19 @@ html, body{
 }
 
 @font-face{
-	font-family: 'OuterspaceMilitia';
+	font-family: 'OSF';
 	src: url(../assets/fonts/OuterspaceMilitia.ttf);
 	font-style: normal;
 	font-weight: 100;
+
 }
 
+ @font-face{
+	font-family: 'CUR';
+	src: url(../assets/fonts/AllertaStencil-Regular.ttf);
+	font-style: normal;
+	font-weight: 100;
+} 
 @keyframes textanim{
 from{
 	opacity: 0;
@@ -28,6 +39,19 @@ from{
 to{
 	opacity: 0.7;
 }
+}
+
+@keyframes colorChange {
+	0%,
+
+	100% {
+	  opacity: 0;
+	}
+
+	50% {
+		opacity: .9;
+	  }
+	
 
 }
 
@@ -68,10 +92,10 @@ to{
 
 
 
-h1 {
-	font-family: OuterspaceMilitia;
+.content-1 h1 {
+	font-family: OSF;
 	font-weight: 600;
-	font-size: 10vh;
+	font-size: 5vw;
 	color: cornsilk;
 	line-height: 1.5;
 	word-spacing: -0.5em;
@@ -87,10 +111,13 @@ h1 {
 	z-index: 2;
 }
 
+
+
 /* SECTION-2 */
 
 .second-section{
-	background-image: url(../assets/images/banner1.jpg);
+	background-color: #000;
+	background: linear-gradient(to bottom,#000000 ,#5788fe );
 	background-size: cover;
 	background-attachment: fixed;
 	height: 90vh;
@@ -102,6 +129,18 @@ h1 {
 	padding-bottom: 500px;
 	position: relative;
 	z-index: 2;
+}
+
+.second-section .filter{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background:  #fe5757;
+		animation: colorChange 30s ease-in-out infinite;
+		animation-fill-mode: both;
+		mix-blend-mode: overlay;
 }
 
 
@@ -147,7 +186,7 @@ h1 {
 .box:hover .icon{
 	top: 0.2em;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-30px,10px);
 	width: 1.5em;
 	height: 1.5em;
 	border-radius: 50%;
@@ -284,32 +323,180 @@ bottom: 25em;
 .footer{
 	background-color: #3D3B3B;
 	position: relative;
-	height: 50vh;
+	height: 44vh;
+	width: 100%;
 	
 }
 
 .footer .footer-contents{
-	border: 1px solid red;
-	height: 44vh;
+	/* border: 1px solid red; */
+	height: 38vh;
 	position: relative;
 	
 
 }
 
-.footer .footer-contents .footer-about{
-	position: relative;
-	width: 50%;
+/* CONTACT SECTION */
+
+.footer-contact{
+	width: 33.33%;
 	height: 98%;
-	border: 2px solid blue;
-	text-align: center;
+	/* border: 2px solid blue; */
+	position: absolute;
 }
 
-.footer  .footer-bottom{
+
+.footer-contact  h2{
+	margin-top: 40px;
+	margin-left: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	letter-spacing: 2px;
+	color: rgb(214, 214, 214);
+	
+	
+}
+
+.footer-contact hr{
+	margin-top: 10px;
+	margin-left: 20px;
+	top: 30px;
+	width: 70%;
+}	
+
+.footer-contact p{
+	color: #fff;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+
+/* QUICKLINKS SECTION */
+
+.footer-quicklinks{
+	left: 33.33%;
+	width: 33.33%;
+	height: 98%;
+	/* border: 2px  solid #26db2f; */
+	position:  absolute;
+
+}
+
+.footer-quicklinks h2{
+	margin-top: 40px;
+	margin-left: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: rgb(214, 214, 214);
+
+}
+
+.footer-quicklinks hr{
+	margin-top: 10px;
+	margin-left: 20px;
+	top: 30px;
+	width: 70%;
+}
+
+.footer-quicklinks p{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.footer-quicklinks a{
+	color: #fff;
+	text-decoration: none;
+}
+
+/* SOCIAL  MEDIA SECTION */
+
+.footer-connect{
+	left: 66.8%;
+	width: 33%;
+	height: 99%;
+	/* border: 2px  solid #26db2f; */
 	position: absolute;
-	padding: 10px;
+
+}
+
+.footer-connect h2{
+	margin-top: 40px;
+	margin-left: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: rgb(214, 214, 214);
+}
+
+.footer-connect hr{
+	margin-top: 10px;
+	margin-left: 20px;
+	top: 30px;
+	width: 70%;
+}
+
+.footer-connect .social{
+	left: 150px;
+	top: 120px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	display: flex;
+}
+
+.footer-connect .social li{
+	list-style: none;
+	margin: 0 15px;
+}
+
+.footer-connect .social .fa{
+	font-size: 25px;
+	line-height: 40px;
+	transition: 0.1s;
+	color: #fff;
+
+}
+
+.footer-connect .social li a{
+	position: relative;
+	display: block;
+	background-color: rgb(58, 58, 58);
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 5px 4px  rgba(0,0,0,0.5);
+}
+
+.footer-connect .social .github a:hover {
+	transform: translate(0,-5px);
+	background-color: rgb(0, 0, 0);
+
+}
+
+.footer-connect .social .twitter a:hover {
+	transform: translate(0,-5px);
+	background-color: rgb(0, 140, 255);
+}
+
+.footer-connect .social .linkedin a:hover {
+	transform: translate(0,-5px);
+	background-color: rgb(49, 102, 216);
+}
+
+.footer-connect .social .youtube a:hover {
+	transform: translate(0,-5px);
+	background-color: rgb(211, 64, 19);
+}
+
+.footer-connect .social a:hover .fa{
+	color: #fff;
+} 
+
+
+
+/* BOTTOM FOOTER */
+
+.footer-bottom{
+	position: absolute;
+	padding: 10px 0px 10px 0px;
 	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	width: 100%;
 	color: #fff;
 	background: rgb(32, 30, 30);
 	text-align: center;
