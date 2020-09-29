@@ -12,31 +12,38 @@
 </head>
 
 <body>
-    
-    <div class="page-wrapper">
+
+    <main class="page-wrapper">
         <section class="first-section">
-            <div class="video-container">
-                <video src="assets/videos/mainu.mp4" autoplay muted loop>
-                </video>
+
+            <div class="image-container">
+
             </div>
 
+            <div class="filter1"></div>
+
+
             <div class="content-1">
-                <header>
-                    <h1>Welcome To The COSMOS</h1>
-                </header>
+
+                <h1>Welcome To The COSMOS</h1>
+
             </div>
 
         </section>
 
         <section class="second-section">
-            
-            <div class="filter">
+
+            <div class="image-container-2">
+
+            </div>
+
+            <div class="filter2">
 
             </div>
 
             <div class="box">
-                <div class="icon"><img class="info" src="assets/icons/info.svg">
-                </div>
+                <!-- <div class="icon"><img class="info" src="assets/icons/info.svg">
+                </div> -->
                 <div class="content">
                     <p>The cosmos a.k.a Universe is a term that implies viewing the universe as a complex and orderly
                         system
@@ -51,43 +58,38 @@
 
             </div>
 
-            <div class="button-wrapper">
-                <a class="button1" href="https://bhaveshds.github.io/Solar-System/">
-                    <!--BUTTON STYLING (N.I.)-->
-                    <!-- <span></span>
-                <span></span>
-                <span></span>
-                <span></span> -->
-                    Click Here
-                </a>
-            </div>
+
 
         </section>
-    </div>
+    </main>
 
     <footer class="footer">
         <div class="footer-contents">
             <div class="footer-contact">
                 <h2>Contact Info</h2>
-                <hr>
+                <hr class="rule">
                 <p>bhaveshbakshi77@gmail.com</p>
                 <p>9667199587</p>
             </div>
             <div class="footer-quicklinks">
                 <h2>Quick Links</h2>
-                <hr>
-                <p><a href="https://bhaveshds.github.io/COSMOS/">Home</a></p>
+                <hr class="rule">
+                <p><a href="https://bhaveshds.github.io/COSMOS/" target="_blank">Home</a></p>
                 <p><a href="#">About</a></p>
-                <p><a href="https://bhaveshds.github.io/Solar-System/">Solar System</a></p>
+                <p><a href="https://bhaveshds.github.io/Solar-System/" target="_blank">Solar System</a></p>
             </div>
             <div class="footer-connect">
                 <h2>Connect</h2>
-                <hr>
+                <hr class="rule">
                 <ul class="social">
-                    <li class="github"><a href="https://github.com/Bhaveshds"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    <li class="github"><a href="https://github.com/Bhaveshds" target="_blank"><i class="fa fa-github"
+                                aria-hidden="true"></i></a></li>
                     <li class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li class="youtube"><a href="https://www.youtube.com/channel/UCVhi8Ig4V4Qqh6qV7R8kc4Q?view_as=subscriber"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li class="linkedin"><a href="https://www.linkedin.com/in/bhavesh-bakshi-50436817a/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="youtube"><a
+                            href="https://www.youtube.com/channel/UCVhi8Ig4V4Qqh6qV7R8kc4Q?view_as=subscriber"
+                            target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/in/bhavesh-bakshi-50436817a/"
+                            target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -96,8 +98,27 @@
         <div class="footer-bottom">
             &copy; abcd.com | Designed by Bhavesh Bakshi
         </div>
+
+
     </footer>
-    
+
 </body>
+<script type="text/javascript">
+    const box = document.querySelector("div.box");
+    const  rect = box.getBoundingClientRect();
+    console.log(rect);
+
+        console.log(window.innerHeight);
+        console.log(box.getBoundingClientRect().top);
+    window.addEventListener("scroll", function ()
+    {
+        
+        if(box.getBoundingClientRect().top < window.innerheight)
+        {
+            box.style.background = 'red';
+        }
+    });
+</script>
+
 
 </html>
