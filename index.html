@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
 
     <title>COSMOS</title>
 </head>
@@ -45,7 +46,7 @@
                 <!-- <div class="icon"><img class="info" src="assets/icons/info.svg">
                 </div> -->
                 <div class="content">
-                    <p>The cosmos a.k.a Universe is a term that implies viewing the universe as a complex and orderly
+                    <p>The cosmos is a term that implies viewing the universe as a complex and orderly
                         system
                         or entity; the opposite of chaos.The cosmos, and our understanding of the reasons for its
                         existence
@@ -64,6 +65,9 @@
     </main>
 
     <footer class="footer">
+        <div class="foot-img">
+            
+        </div>
         <div class="footer-contents">
             <div class="footer-contact">
                 <h2>Contact Info</h2>
@@ -101,24 +105,8 @@
 
 
     </footer>
-
+    <script src="anim.js"></script>
 </body>
-<script type="text/javascript">
-    const box = document.querySelector("div.box");
-    const  rect = box.getBoundingClientRect();
-    console.log(rect);
-
-        console.log(window.innerHeight);
-        console.log(box.getBoundingClientRect().top);
-    window.addEventListener("scroll", function ()
-    {
-        
-        if(box.getBoundingClientRect().top < window.innerheight)
-        {
-            box.style.background = 'red';
-        }
-    });
-</script>
 
 
 </html>
