@@ -11,3 +11,4 @@ gsap.to(".box", {
     duration: 3,
  
 });
+
